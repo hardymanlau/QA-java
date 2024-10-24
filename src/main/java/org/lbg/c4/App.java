@@ -1,6 +1,8 @@
 package org.lbg.c4;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
 
 /**
  * Hello world!
@@ -13,10 +15,22 @@ import java.io.IOException;
 public class App {
     public static void main(String[] args)
     {
+//
+//        int counter = 0;
+//        char val;
 
-        int counter = 0;
-        char val;
+        InputStreamReader isr = new InputStreamReader(System.in);
+        LineNumberReader lnr = new LineNumberReader(isr);
 
+        try {
+            while ( lnr.readLine() != null );
+
+            System.out.println("No. of lines: " + lnr.getLineNumber());
+        }catch (IOException e) {
+            System.out.println(e);
+        }
+
+/*
         try {
             while ( (val = (char)System.in.read()) != -1) {
 //                System.out.println("Character entered: " + val);
@@ -36,29 +50,29 @@ public class App {
 
 
 
-//        System.out.println("Hello World!");
-//
-//        int x = 33; //need to define data type
-//        System.out.println("Hello World! " + x);
-//
-//        short s = 14;
-//        int i = 0xfe;
-//        s = (short)i;
-//
-//        System.out.println("Hello World i = " + i);
-//        System.out.println("Hello World i = " + s);
-//
-//        s = (short)i;
+        System.out.println("Hello World!");
 
-//        int x = 0;
-//
-//        while ((x = x + 1) < 10) {
-//            System.out.println("hello: " + x);
-//        }
-//
-//        for (x = 0; x < 10; x++)
-//            System.out.println("Hello: " + x);
-//
+        int x = 33; //need to define data type
+        System.out.println("Hello World! " + x);
+
+        short s = 14;
+        int i = 0xfe;
+        s = (short)i;
+
+        System.out.println("Hello World i = " + i);
+        System.out.println("Hello World i = " + s);
+
+        s = (short)i;
+
+        int x = 0;
+
+        while ((x = x + 1) < 10) {
+            System.out.println("hello: " + x);
+        }
+
+        for (x = 0; x < 10; x++)
+            System.out.println("Hello: " + x);
+*/
 
     }
 }
