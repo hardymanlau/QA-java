@@ -30,12 +30,15 @@ public class App {
         InputStreamReader isr = new InputStreamReader(System.in);
         LineNumberReader lnr = new LineNumberReader(isr);
 
-        ArrayList<String> lines = new ArrayList<>();
+        ArrayList<LineItem> lines = new ArrayList<>();
 
         try {
             String line;
-            while (prompt () && (line=lnr.readLine()) != null)
-                lines.add(line);
+            int lineNo = 0;
+            while (prompt () && (line=lnr.readLine()) != null) {
+                LineItem li = new LineItem(++lineNo, line);
+                lines.add(li);
+            }
         }catch (IOException e){
             System.out.println(e);
         }
