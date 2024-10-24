@@ -19,8 +19,13 @@ public class App {
 
         try {
             while ( (val = (char)System.in.read()) != -1) {
-                System.out.println("Character entered: " + val);
+//                System.out.println("Character entered: " + val);
+//                counter ++;
+
+                System.out.println("Character entered: " + Integer.toHexString(val));
                 counter ++;
+
+
             }
 
             System.out.println("number of chars: " + counter);
