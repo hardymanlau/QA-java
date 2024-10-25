@@ -200,3 +200,48 @@ public class App {
         }
     }
 }
+
+
+
+
+Task 2
+
+import java.util.Scanner;
+
+/**
+ * Hello world!
+ *
+ * Task 1:
+ * Ask user for 2 no. and print bigger one
+ * Ask user for another no. and print out if it's odd or even
+ * Ask user for traffic light colour and print corresponding instruction: green= go etc
+ *
+ *
+ * Task 2:
+ * Ask user for no. between 1-12
+ * Based on no. print if corresponding month is in Spring, Summer, Autumn or Winter
+ * Catch to let user know if no. invlaid
+ *
+ *
+ * Task 3:
+ * Ask user for 2 no.
+ * ask user for operator
+ * Consider user's chosen operator, perform correct mathematical operation on supplied no.
+ * Let user know if invalid operator
+ * Print result
+ *
+ */
+public class task2 {
+    public static void main(String[] args) {
+
+
+        Scanner userNum1 = new Scanner(System.in);
+        System.out.println("Please enter a number between 1 and 12: ");
+
+        int num1 = Integer.parseInt(userNum1.nextLine());
+
+        if(num1 ) // from 1 -3, 4-6, 7-9, 10-12, else, ask for valid number. 
+
+    }
+}
+
