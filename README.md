@@ -122,3 +122,81 @@ public class App {
         System.out.println("The total cost is: £ " + String.format("%.2f", addVat(totalCost, vatRate)));
         calc.close();
     }
+
+
+
+
+
+
+
+
+
+
+
+Conditionals exercise
+
+import java.util.Scanner;
+
+/**
+ * Hello world!
+ *
+ * Task 1:
+ * Ask user for 2 no. and print bigger one
+ * Ask user for another no. and print out if it's odd or even
+ * Ask user for traffic light colour and print corresponding instruction: green= go etc
+ *
+ *
+ * Task 2:
+ * Ask user for no. between 1-12
+ * Based on no. print if corresponding month is in Spring, Summer, Autumn or Winter
+ * Catch to let user know if no. invlaid
+ *
+ *
+ * Task 3:
+ * Ask user for 2 no.
+ * ask user for operator
+ * Consider user's chosen operator, perform correct mathematical operation on supplied no.
+ * Let user know if invalid operator
+ * Print result
+ *
+ */
+public class App {
+    public static void main(String[] args) {
+
+
+        Scanner userNum1 = new Scanner(System.in);
+        System.out.println("Please enter a number: ");
+
+        Scanner userNum2 = new Scanner(System.in);
+        System.out.println("Please enter another number: ");
+
+        int num1 = Integer.parseInt(userNum1.nextLine());
+        int num2 = Integer.parseInt(userNum2.nextLine());
+
+        System.out.println("The highest no. is " + Math.max(num1, num2));
+
+        Scanner userNum3 = new Scanner(System.in);
+        System.out.println("Please enter another number: ");
+        int num3 = Integer.parseInt(userNum3.nextLine());
+
+        if ((num3 % 2) == 0) {
+            System.out.println("Your number is even");
+        } else {
+            System.out.println("Your number is odd");
+        }
+
+        Scanner userColour = new Scanner(System.in);
+        System.out.println("Please enter a colour - red, green or amber: ");
+        String colours = userColour.nextLine();
+        if (colours.equals("red"))
+        {
+            System.out.println("Stop");
+        } else {
+            if (colours.equals("amber")) {
+                System.out.println("Get ready");
+            } else {
+                System.out.println("Go");
+            }
+        }
+    }
+}
