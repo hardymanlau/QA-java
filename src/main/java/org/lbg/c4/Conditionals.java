@@ -59,6 +59,8 @@ public class Conditionals { public static void main(String[] args) {
 //        }
 //    }
 
+
+
     Scanner userNum1 = new Scanner(System.in);
     System.out.println("Please enter a number between 1 and 12: ");
 
@@ -76,8 +78,6 @@ public class Conditionals { public static void main(String[] args) {
         System.out.println("Please enter a valid number.");
     }
 
-
-    
 }
 }
 
