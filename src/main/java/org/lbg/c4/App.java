@@ -22,18 +22,26 @@ public class App {
 //
 //        System.out.println("Initial balance is: £" + ba.getBalance());
 //
-//        System.out.println(ba.credit(13.78));
+//        ba.credit(13.78);
 //
-//        System.out.println(ba.debit(40));
+//        ba.debit(2);
+//
+//    Calculator calc = new Calculator(0);
+//
+//        System.out.println("Current total: " + calc.getRunningTotal());
+//        calc.add(3);
+//        calc.subtract(6);
+//        calc.add(8);
+//        calc.divide(9);
+//        calc.multiply(0);
 
-    Calculator calc = new Calculator(0);
 
-        System.out.println("Current total: " + calc.getRunningTotal());
-        calc.add(3);
-        calc.subtract(6);
-        calc.add(8);
-        calc.divide(9);
-        calc.multiply(0);
+
+        BankAccount2 ba = new BankAccount2(33.33);
+        System.out.println(ba.getBalance());
+
+        ba.debit(34);
+        System.out.println(ba.getBalance());
 
 
     }
