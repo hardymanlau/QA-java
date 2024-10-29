@@ -1,32 +1,48 @@
 package org.lbg.c4;
 
-import java.util.Scanner;
-
 
 /**
- Task 3:
- Ask user for 2 no.
- ask user for operator
- Consider user's chosen operator, perform correct mathematical operation on supplied no.
- Let user know if invalid operator
- Print result
+ new class called Calculator with constructor - running total (stored attribute)
+ add method, subtract, divide, multiply
  */
 
 public class Calculator {
-    public static void main(String[] args) {
 
-        Scanner userNum1 = new Scanner(System.in);
-        System.out.println("Please enter a number: ");
+    private double runningTotal;
 
-        int num1 = Integer.parseInt(userNum1.nextLine());
+    public Calculator(double total) {
+        runningTotal = total;
+    }
 
-        Scanner userNum2 = new Scanner(System.in);
-        System.out.println("Please enter another number: ");
+    public double getRunningTotal() {
+        return runningTotal;
+    }
 
-        int num2 = Integer.parseInt(userNum2.nextLine());
 
-        Scanner operator = new Scanner(System.in);
-        System.out.println("Please enter an operator: ");
+    public void add(double value){
+        runningTotal += value;
+        System.out.println("Added value: " + value + " New total: " + runningTotal);
+    }
+
+    public void subtract(double value){
+        if (value >=0 && value > runningTotal){
+            runningTotal -= value;
+            System.out.println("Subtracted value: " + value + " New total: " + runningTotal);
+        } else {
+            System.out.println("Please enter a valid number. ");
+        }
 
     }
+
+    public void multiply(double value) {
+        runningTotal *= value;
+        System.out.println("Multiplied value: " + value + " New total: " + runningTotal);
+    }
+
+    public void divide(double value) {
+        runningTotal /= value;
+        System.out.println("Divided value: " + value + " New total: " + runningTotal);
+    }
+
+
 }

@@ -15,9 +15,14 @@ public class BankAccount {
         return itsBalance;
     }
 
+    public void setBalance(double amount) {
+         if (amount >= 0){
+             itsBalance = amount;
+         }
+    }
 
-    // attempt with public void and removing return statement
-    public double setCredit (double amount) {
+    //applying programme logic
+    public double credit (double amount) {
         if (amount > 0) {
             System.out.println("Deposited £" + amount);
             return itsBalance + amount;
@@ -27,8 +32,13 @@ public class BankAccount {
         }
     }
 
-    // attempt with public void and removing return statement
-    public double setDebit (double amount) {
+
+//    // alternative method for credit
+//    public void credit(double amount) {
+//        if
+//    }
+
+    public double debit (double amount) {
         if (amount > 0 && amount <= itsBalance) {
             System.out.println("Withdrawn £" + amount);
             return itsBalance - amount;

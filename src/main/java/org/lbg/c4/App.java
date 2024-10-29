@@ -17,17 +17,23 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) {
 
-    BankAccount ba = new BankAccount(36.5); // created new instance of class, calling it ba, adding
-        // argument for account balance
+//    BankAccount ba = new BankAccount(36.5); // created new instance of class, calling it ba, adding
+//        // argument for account balance
+//
+//        System.out.println("Initial balance is: £" + ba.getBalance());
+//
+//        System.out.println(ba.credit(13.78));
+//
+//        System.out.println(ba.debit(40));
 
+    Calculator calc = new Calculator(0);
 
-        System.out.println("Initial balance is: £" + ba.getBalance());
-
-        System.out.println(ba.setCredit(13.78));
-
-        System.out.println(ba.setDebit(40));
-
-
+        System.out.println("Current total: " + calc.getRunningTotal());
+        calc.add(3);
+        calc.subtract(6);
+        calc.add(8);
+        calc.divide(9);
+        calc.multiply(0);
 
 
     }
