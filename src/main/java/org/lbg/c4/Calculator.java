@@ -25,7 +25,7 @@ public class Calculator {
     }
 
     public void subtract(double value){
-        if (value >=0 && value > runningTotal){
+        if (value >=0 && value < runningTotal){
             runningTotal -= value;
             System.out.println("Subtracted value: " + value + " New total: " + runningTotal);
         } else {
