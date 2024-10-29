@@ -62,7 +62,7 @@ public class Conditionals { public static void main(String[] args) {
 
 
     // Create a while loop so that if x= true, i.e have entered a value between 1-12, end the loop but
-    // while x is false, the loop continues. 
+    // while x is false, the loop continues.
 
     Scanner userNum1 = new Scanner(System.in);
     System.out.println("Please enter a number between 1 and 12: ");

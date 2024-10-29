@@ -17,6 +17,16 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) {
 
+    BankAccount ba = new BankAccount(36.5); // created new instance of class, calling it ba, adding
+        // argument for account balance
+
+
+        System.out.println("Initial balance is: £" + ba.getBalance());
+
+        System.out.println(ba.setCredit(13.78));
+
+        System.out.println(ba.setDebit(40));
+
 
 
 
