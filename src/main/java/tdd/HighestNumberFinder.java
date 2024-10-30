@@ -2,7 +2,11 @@ package tdd;
 
 public class HighestNumberFinder {
     public int findHighestNumber(int[] input) {
-        
-        return input[0];
+        if (input[0] > input [1]) {
+            return input[0];
+        } else {
+            return input[1];
+        }
+
     }
 }
