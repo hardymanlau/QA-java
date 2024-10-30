@@ -69,17 +69,27 @@ public class Conditionals { public static void main(String[] args) {
 
     int num1 = Integer.parseInt(userNum1.nextLine());
 
-    if (num1 >= 1 && num1 <= 3) {
-        System.out.println("This month is in Winter.");
-    } else if (num1 >=4 && num1 <= 6) {
-        System.out.println("This month is in Spring.");
-    } else if (num1 >= 7 && num1 <= 9) {
-        System.out.println("This month is in Summer.");
-    } else if (num1 >= 10 && num1 <= 12) {
-        System.out.println("This month is in Autumn");
-    } else {
-        System.out.println("Please enter a valid number.");
+    boolean x = false;
+
+    while (x != true) {
+        if (num1 >= 1 && num1 <= 3) {
+            System.out.println("This month is in Winter.");
+            x = true;
+        } else if (num1 >=4 && num1 <= 6) {
+            System.out.println("This month is in Spring.");
+            x = true;
+        } else if (num1 >= 7 && num1 <= 9) {
+            System.out.println("This month is in Summer.");
+            x = true;
+        } else if (num1 >= 10 && num1 <= 12) {
+            System.out.println("This month is in Autumn");
+            x = true;
+        } else {
+            System.out.println("Please enter a valid number.");
+            x = false;
+        }
     }
+
 
 }
 }
