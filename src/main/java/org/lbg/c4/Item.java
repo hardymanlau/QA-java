@@ -32,4 +32,8 @@ public class Item
     {
         return price * quantity;
     }
+
+    public String getDescription(){
+        return this.description;
+    }
 }
