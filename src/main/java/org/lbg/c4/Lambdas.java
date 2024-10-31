@@ -28,6 +28,7 @@ public class Lambdas
         }
     }
 
+    @FunctionalInterface  // means you can only have 1 method
     interface Callback {
         public void execute();
     }
@@ -53,5 +54,16 @@ public class Lambdas
             }
         };
         cc.execute();
+
+
+        // lambda functions
+        // cc2 = () -> { is the same as typing cc = new Callback(){
+        // @Override etc
+
+        Callback cc2 = () ->{
+            System.out.println("Hello from interface cc2, lambda");
+        };
+
+        cc2.execute();
     }
 }
